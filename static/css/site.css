@@ -332,6 +332,52 @@ body.site-body {
   border: 1px solid var(--border-subtle);
 }
 
+.hero-layout-home {
+  align-items: center;
+}
+
+.hero-text-home {
+  min-height: 100%;
+}
+
+.hero-panel-avatar {
+  padding: 20px;
+  background:
+    radial-gradient(circle at top, rgba(251, 191, 36, 0.28), transparent 48%),
+    linear-gradient(180deg, #fffaf0 0%, #fff 100%);
+}
+
+.avatar-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 247, 237, 0.94)),
+    linear-gradient(90deg, rgba(217, 119, 6, 0.05) 1px, transparent 1px),
+    linear-gradient(rgba(217, 119, 6, 0.05) 1px, transparent 1px);
+  background-size: auto, 16px 16px, 16px 16px;
+  border: 1px solid rgba(217, 119, 6, 0.12);
+}
+
+.avatar-grid {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 22%, rgba(251, 191, 36, 0.28), transparent 34%),
+    radial-gradient(circle at 50% 100%, rgba(217, 119, 6, 0.14), transparent 38%);
+}
+
+.avatar-pixel-horse {
+  position: relative;
+  width: min(100%, 320px);
+  height: auto;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 20px 34px rgba(89, 52, 33, 0.18));
+}
+
 .panel-title {
   margin: 0 0 10px;
   font-size: 16px;
@@ -542,5 +588,12 @@ body.site-body {
   .hero-panel {
     order: -1;
   }
-}
 
+  .avatar-stage {
+    min-height: 240px;
+  }
+
+  .avatar-pixel-horse {
+    width: min(100%, 240px);
+  }
+}

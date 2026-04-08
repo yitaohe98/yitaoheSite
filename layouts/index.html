@@ -1,15 +1,37 @@
 {{ define "main" }}
-  <section class="section">
+  <section class="section section-hero">
+    <div class="container">
+      <div class="hero-layout hero-layout-home">
+        <header class="hero-text hero-text-home">
+          <h1 class="hero-title">{{ if .Title }}{{ .Title }}{{ else }}{{ i18n "nav.home" }}{{ end }}</h1>
+          {{ if .Content }}
+            <div class="hero-body">
+              {{ .Content }}
+            </div>
+          {{ end }}
+        </header>
+
+        <aside class="hero-panel hero-panel-avatar" aria-label="Pixel horse avatar">
+          <div class="avatar-stage">
+            <div class="avatar-grid" aria-hidden="true"></div>
+            <img
+              class="avatar-pixel-horse"
+              src="{{ "img/pixel-horse-avatar.svg" | relURL }}"
+              alt="Pixel horse avatar"
+              width="320"
+              height="320"
+            >
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-secondary">
     <div class="container">
       <header class="page-header">
-        <h1 class="page-title">{{ if .Title }}{{ .Title }}{{ else }}{{ i18n "nav.home" }}{{ end }}</h1>
-        {{ if .Content }}
-          <div class="page-intro">
-            {{ .Content }}
-          </div>
-        {{ end }}
+        <h2 class="page-title">{{ i18n "nav.blogs" }}</h2>
       </header>
-
       <div class="grid grid-posts">
         {{ $blogs := where .Site.RegularPages "Section" "blogs" }}
         {{ range first 6 $blogs }}
