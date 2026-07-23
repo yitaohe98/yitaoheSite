@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>SEO on yitaohe.com</title>
+		<link>https://www.yitaohe.com/zh/tags/seo/</link>
+		<description>Recent content in SEO on yitaohe.com</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 23 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://www.yitaohe.com/zh/tags/seo/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>25 小时、30 美元：我的第一次 0–1 网站实验</title>
+				<link>https://www.yitaohe.com/zh/blogs/25-%E5%B0%8F%E6%97%B630-%E7%BE%8E%E5%85%83%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1-01-%E7%BD%91%E7%AB%99%E5%AE%9E%E9%AA%8C/</link>
+				<pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.yitaohe.com/zh/blogs/25-%E5%B0%8F%E6%97%B630-%E7%BE%8E%E5%85%83%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1-01-%E7%BD%91%E7%AB%99%E5%AE%9E%E9%AA%8C/</guid>
+				<description>&lt;p&gt;我用四天、约 25 个小时，做完并上线了一个小型网页游戏网站。&lt;/p&gt;&#xA;&lt;p&gt;实际成本不高：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;域名：10 美元&lt;/li&gt;&#xA;&lt;li&gt;AI coding tokens：20 美元&lt;/li&gt;&#xA;&lt;li&gt;开发时间：约 25 小时&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;项目的起点是一段视频。视频里提到，罗马尼亚的一个 Mahjong Solitaire 网站，每月收入可以达到 5,000–20,000 美元。视频中的收入数字无法核实，但这个品类本身确实有需求：Google 搜索结果里有不少成熟网站，也能看到大量用户活动。&lt;/p&gt;&#xA;&lt;p&gt;为了避免只是复制一个同类产品，我在游戏之外加入了一层亚洲文化相关的内容，希望同时形成差异化，并拓展 SEO 的覆盖范围。&lt;/p&gt;&#xA;&lt;h2 id=&#34;真正困难的不是开发&#34;&gt;真正困难的不是开发&lt;/h2&gt;&#xA;&lt;p&gt;大约一半时间花在游戏开发、测试和难度调整上。过程并不顺利：AI 有时会误解游戏规则，电脑对手可能卡住，prompt 需要来回修改，UI 素材还要确认 licence。&lt;/p&gt;&#xA;&lt;p&gt;但回头看，这些都不是项目最关键的问题。它们只是工程问题，多试几次，大多都能解决。&lt;/p&gt;&#xA;&lt;p&gt;真正让我反复犹豫的是：用户为什么会找到这个网站？&lt;/p&gt;&#xA;&lt;p&gt;这个问题直接影响了主题、定位、域名、内容和整体方向。我知道这类游戏有人玩，但我并没有验证自己的 SEO 方案是否成立。开发前，我本应该先研究：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;目标关键词有没有搜索量&lt;/li&gt;&#xA;&lt;li&gt;搜索趋势是否稳定&lt;/li&gt;&#xA;&lt;li&gt;排名前面的竞品有多强&lt;/li&gt;&#xA;&lt;li&gt;是否存在可切入的长尾关键词&lt;/li&gt;&#xA;&lt;li&gt;现有产品还有哪些明显缺口&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;实际情况是，我主要依赖了那段视频、Google 上已有的大量竞品，以及一个并不严谨的判断：既然需求已经存在，新产品应该也有机会。&lt;/p&gt;&#xA;&lt;p&gt;但“有人需要”与“我能获得这些用户”是两回事。开发到后面，我对 SEO 能否带来流量越来越没有把握。获客路径不清晰之后，继续打磨产品也开始变得无聊。&lt;/p&gt;&#xA;&lt;p&gt;这次最重要的教训是：&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;产品需求被验证过，不代表新的产品拥有可行的获客渠道。&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;mvp-做到什么程度可以停&#34;&gt;MVP 做到什么程度可以停&lt;/h2&gt;&#xA;&lt;p&gt;我原本还可以继续调整电脑对手难度、优化 UI、增加内容，但我决定先停下来。&lt;/p&gt;&#xA;&lt;p&gt;在没有真实用户之前，我并不知道哪个游戏更受欢迎、当前难度是否合适、用户会通过什么关键词进入，以及哪些功能真正值得继续投入。所以现阶段，MVP 只需要满足两个条件：能用，并且能被衡量。&lt;/p&gt;&#xA;&lt;p&gt;我已经接入了 analytics 和每日自动监控，用来观察搜索流量、真人行为和回访用户。第一周主要检查 Google 是否正常收录，以及 analytics、页面和监控是否工作。SEO 的 impressions 和排名通常需要更长时间才能出现，因此我会给项目一到三个月的观察期，同时尽量不再追加开发成本。&lt;/p&gt;&#xA;&lt;p&gt;目前的策略很简单：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;修复影响使用、收录或统计的重要 bug&lt;/li&gt;&#xA;&lt;li&gt;保持网站在线&lt;/li&gt;&#xA;&lt;li&gt;持续收集数据&lt;/li&gt;&#xA;&lt;li&gt;只有出现真实用户、持续使用或回访信号时，才继续投入&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;下一个-mvp我会先做什么&#34;&gt;下一个 MVP，我会先做什么&lt;/h2&gt;&#xA;&lt;p&gt;下一次开始开发之前，我会先验证 distribution，而不只是验证产品需求。具体来说，我会先确认：&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

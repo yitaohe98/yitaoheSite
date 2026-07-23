@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Updates on yitaohe.com</title>
+		<link>https://www.yitaohe.com/updates/</link>
+		<description>Recent content in Updates on yitaohe.com</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 23 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://www.yitaohe.com/updates/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Published my first blog post</title>
+				<link>https://www.yitaohe.com/updates/2026-07-23-first-blog/</link>
+				<pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.yitaohe.com/updates/2026-07-23-first-blog/</guid>
+				<description>&lt;p&gt;Published my first long-form post on this site: &lt;em&gt;25 Hours, $30, and My First 0–1 Website Experiment&lt;/em&gt;. I also refreshed the home page and added this updates feed for smaller notes between essays.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

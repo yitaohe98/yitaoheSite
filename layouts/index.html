@@ -2,26 +2,43 @@
   <section class="section section-hero">
     <div class="container">
       <div class="hero-layout hero-layout-home">
-        <header class="hero-text hero-text-home">
-          <h1 class="hero-title">{{ if .Title }}{{ .Title }}{{ else }}{{ i18n "nav.home" }}{{ end }}</h1>
-          {{ if .Content }}
-            <div class="hero-body">
-              {{ .Content }}
+        <section class="hero-text hero-text-home">
+          <div class="hero-intro">
+            <div class="avatar-stage avatar-stage-compact">
+              <div class="avatar-grid" aria-hidden="true"></div>
+              <img
+                class="avatar-panda"
+                src="{{ "img/panda-avatar.png" | relURL }}"
+                alt="{{ i18n "home.avatarAlt" }}"
+                width="272"
+                height="262"
+              >
             </div>
-          {{ end }}
-        </header>
-
-        <aside class="hero-panel hero-panel-avatar" aria-label="Pixel horse avatar">
-          <div class="avatar-stage">
-            <div class="avatar-grid" aria-hidden="true"></div>
-            <img
-              class="avatar-pixel-horse"
-              src="{{ "img/pixel-horse-avatar.svg" | relURL }}"
-              alt="Pixel horse avatar"
-              width="320"
-              height="320"
-            >
+            <div class="hero-copy">
+              <h1 class="hero-title">{{ if .Title }}{{ .Title }}{{ else }}{{ i18n "nav.home" }}{{ end }}</h1>
+              {{ if .Content }}
+                <div class="hero-body">
+                  {{ .Content }}
+                </div>
+              {{ end }}
+            </div>
           </div>
+        </section>
+
+        <aside class="hero-panel hero-updates" aria-label="{{ i18n "updates.latest" }}">
+          <header class="updates-panel-header">
+            <div>
+              <span class="updates-eyebrow">{{ i18n "updates.eyebrow" }}</span>
+              <h2 class="updates-panel-title">{{ i18n "updates.latest" }}</h2>
+            </div>
+            <a class="updates-all-link" href="{{ "updates/" | relLangURL }}">{{ i18n "updates.viewAll" }} →</a>
+          </header>
+          {{ $updates := where (where .Site.RegularPages "Section" "updates") "Lang" .Lang }}
+          {{ with index $updates.ByDate.Reverse 0 }}
+            {{ partial "update-card.html" . }}
+          {{ else }}
+            <p class="updates-empty">{{ i18n "updates.empty" }}</p>
+          {{ end }}
         </aside>
       </div>
     </div>

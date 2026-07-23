@@ -1,0 +1,13 @@
+<article class="update-card" data-update-month="{{ .Date.Format "2006-01" }}">
+  <time class="update-date" datetime="{{ .Date.Format "2006-01-02" }}">
+    {{- if eq .Lang "zh" -}}
+      {{ .Date.Format "2006年1月2日" }}
+    {{- else -}}
+      {{ .Date.Format "Jan 02, 2006" }}
+    {{- end -}}
+  </time>
+  <h2 class="update-title">{{ .Title }}</h2>
+  <div class="update-content">
+    {{ .Content }}
+  </div>
+</article>

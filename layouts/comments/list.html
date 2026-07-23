@@ -2,27 +2,15 @@
   <section class="section">
     <div class="container">
       <header class="page-header">
-        <h1 class="page-title">Comments &amp; Contact</h1>
-        <p class="page-subtitle">
-          Static contact page for v1.0. No interactive comment system yet.
-        </p>
+        <h1 class="page-title">{{ .Title }}</h1>
+        {{ with .Params.description }}
+          <p class="page-subtitle">{{ . }}</p>
+        {{ end }}
       </header>
 
       <div class="page-content">
         {{ .Content }}
-
-        <div class="contact-cards">
-          <div class="card card-contact">
-            <h2>GitHub</h2>
-            <p>Open an issue or star the repo. (placeholder link)</p>
-          </div>
-          <div class="card card-contact">
-            <h2>Email</h2>
-            <p>Send feedback, ideas, or questions. (placeholder address)</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 {{ end }}
-

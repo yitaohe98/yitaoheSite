@@ -8,12 +8,28 @@ home = "首页"
 overview = "概览"
 blogs = "博客"
 comments = "留言"
+updates = "动态"
 switchLanguage = "翻译/Language"
 
 [overview]
-featured = "精选文章"
+latestPosts = "最新文章"
+noPosts = "暂无文章。"
 education = "教育"
 career = "工作"
+
+[home]
+placeholder = "即将推出"
+avatarAlt = "熊猫头像"
+
+[contact]
+emailCopied = "邮箱已复制"
+
+[updates]
+eyebrow = "最近"
+latest = "最新动态"
+viewAll = "全部动态"
+filterLabel = "按月份筛选"
+empty = "暂无动态。"
 
 [lang]
 en = "EN"

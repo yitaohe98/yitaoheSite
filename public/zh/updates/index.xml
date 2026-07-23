@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>动态 on yitaohe.com</title>
+		<link>https://www.yitaohe.com/zh/updates/</link>
+		<description>Recent content in 动态 on yitaohe.com</description>
+		<generator>Hugo</generator>
+		<language>zh-cn</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 23 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://www.yitaohe.com/zh/updates/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>发布了第一篇博客</title>
+				<link>https://www.yitaohe.com/zh/updates/2026-07-23-first-blog/</link>
+				<pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.yitaohe.com/zh/updates/2026-07-23-first-blog/</guid>
+				<description>&lt;p&gt;发布了这个网站的第一篇长文《25 小时、30 美元：我的第一次 0–1 网站实验》。同时也更新了首页，并增加了动态页面，用来记录长文之间的短想法和小进展。&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

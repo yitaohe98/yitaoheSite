@@ -6,15 +6,15 @@
       </div>
 
       <div class="hero-panel">
-        <h2 class="panel-title">{{ i18n "overview.featured" }}</h2>
+        <h2 class="panel-title">{{ i18n "overview.latestPosts" }}</h2>
         <div class="panel-list">
-          {{ $featured := where (where .Site.RegularPages "Params.featured" true) "Lang" .Lang }}
-          {{ if gt (len $featured) 0 }}
-            {{ range first 3 $featured }}
+          {{ $blogs := where (where .Site.RegularPages "Section" "blogs") "Lang" .Lang }}
+          {{ if gt (len $blogs) 0 }}
+            {{ range first 3 $blogs.ByDate.Reverse }}
               {{ partial "blog-card.html" . }}
             {{ end }}
           {{ else }}
-            <p class="panel-empty">{{ i18n "overview.featured" }}</p>
+            <p class="panel-empty">{{ i18n "overview.noPosts" }}</p>
           {{ end }}
         </div>
       </div>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>MVP on yitaohe.com</title>
+		<link>https://www.yitaohe.com/tags/mvp/</link>
+		<description>Recent content in MVP on yitaohe.com</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 23 Jul 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://www.yitaohe.com/tags/mvp/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>25 Hours, $30, and My First 0–1 Website Experiment</title>
+				<link>https://www.yitaohe.com/blogs/25-hours-30-and-my-first-01-website-experiment/</link>
+				<pubDate>Thu, 23 Jul 2026 00:00:00 +0000</pubDate>
+				<guid>https://www.yitaohe.com/blogs/25-hours-30-and-my-first-01-website-experiment/</guid>
+				<description>&lt;p&gt;I spent four days building and launching a small browser-game website.&lt;/p&gt;&#xA;&lt;p&gt;The total cost was:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;25 hours of work&lt;/li&gt;&#xA;&lt;li&gt;$10 for the domain&lt;/li&gt;&#xA;&lt;li&gt;$20 in AI coding tokens&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The idea came from a video claiming that a Mahjong Solitaire website in Romania was generating $5,000–$20,000 in monthly recurring revenue. I could not verify the revenue claim, but the underlying demand appeared real: established competitors showed up in search, and there was clearly an active audience for the games.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

@@ -76,6 +76,7 @@ body.site-body {
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -337,14 +338,18 @@ body.site-body {
 }
 
 .hero-text-home {
-  min-height: 100%;
+  padding: 20px;
 }
 
-.hero-panel-avatar {
-  padding: 20px;
-  background:
-    radial-gradient(circle at top, rgba(251, 191, 36, 0.28), transparent 48%),
-    linear-gradient(180deg, #fffaf0 0%, #fff 100%);
+.hero-intro {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.9fr) minmax(0, 1.5fr);
+  align-items: center;
+  gap: 22px;
+}
+
+.hero-copy .hero-body {
+  margin-bottom: 0;
 }
 
 .avatar-stage {
@@ -362,6 +367,10 @@ body.site-body {
   border: 1px solid rgba(217, 119, 6, 0.12);
 }
 
+.avatar-stage-compact {
+  min-height: 220px;
+}
+
 .avatar-grid {
   position: absolute;
   inset: 0;
@@ -370,12 +379,145 @@ body.site-body {
     radial-gradient(circle at 50% 100%, rgba(217, 119, 6, 0.14), transparent 38%);
 }
 
-.avatar-pixel-horse {
+.avatar-panda {
   position: relative;
-  width: min(100%, 320px);
+  width: min(100%, 220px);
   height: auto;
-  image-rendering: pixelated;
   filter: drop-shadow(0 20px 34px rgba(89, 52, 33, 0.18));
+}
+
+.hero-updates {
+  min-height: 260px;
+  padding: 22px;
+  background:
+    radial-gradient(circle at top right, rgba(251, 191, 36, 0.14), transparent 42%),
+    var(--bg-elevated);
+}
+
+.updates-panel-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.updates-eyebrow {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.updates-panel-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.updates-all-link {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.updates-all-link:hover {
+  text-decoration: underline;
+}
+
+.update-card {
+  padding: 18px 20px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-subtle);
+}
+
+.hero-updates .update-card {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.update-date {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--fg-muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.update-title {
+  margin: 0 0 8px;
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+.update-content {
+  color: var(--fg);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.update-content p {
+  margin: 0;
+}
+
+.updates-empty {
+  margin: 0;
+  color: var(--fg-muted);
+  font-size: 13px;
+}
+
+.container-updates {
+  max-width: 820px;
+}
+
+.updates-page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.updates-page-header .page-intro p {
+  margin-bottom: 0;
+}
+
+.updates-filter {
+  display: grid;
+  flex: 0 0 auto;
+  gap: 6px;
+  color: var(--fg-muted);
+  font-size: 12px;
+}
+
+.updates-month-select {
+  min-width: 140px;
+  padding: 9px 34px 9px 11px;
+  color: var(--fg);
+  font: inherit;
+  font-size: 14px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+}
+
+.updates-feed {
+  display: grid;
+  gap: 14px;
+}
+
+.update-card[hidden] {
+  display: none;
 }
 
 .panel-title {
@@ -460,13 +602,6 @@ body.site-body {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--fg-muted);
-}
-
-.badge-accent {
-  border-color: var(--accent);
-  background: var(--accent-soft);
-  color: var(--accent);
-  margin-top: 6px;
 }
 
 .meta-dot,
@@ -585,15 +720,30 @@ body.site-body {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .hero-panel {
-    order: -1;
+  .hero-intro {
+    grid-template-columns: minmax(120px, 0.8fr) minmax(0, 1.5fr);
+    gap: 14px;
   }
 
-  .avatar-stage {
-    min-height: 240px;
+  .avatar-stage-compact {
+    min-height: 180px;
   }
 
-  .avatar-pixel-horse {
-    width: min(100%, 240px);
+  .avatar-panda {
+    width: min(100%, 180px);
+  }
+
+  .hero-updates {
+    min-height: auto;
+  }
+
+  .updates-page-header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .updates-filter,
+  .updates-month-select {
+    width: 100%;
   }
 }

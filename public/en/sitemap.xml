@@ -2,167 +2,182 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blogs/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
+    <loc>https://www.yitaohe.com/blogs/25-hours-30-and-my-first-01-website-experiment/</loc>
+    <lastmod>2026-07-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/blogs/"
+                href="https://www.yitaohe.com/zh/blogs/25-%E5%B0%8F%E6%97%B630-%E7%BE%8E%E5%85%83%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1-01-%E7%BD%91%E7%AB%99%E5%AE%9E%E9%AA%8C/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/blogs/"
+                href="https://www.yitaohe.com/blogs/25-hours-30-and-my-first-01-website-experiment/"
                 />
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
+    <loc>https://www.yitaohe.com/tags/ai-assisted-development/</loc>
+    <lastmod>2026-07-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.yitaohe.com/blogs/</loc>
+    <lastmod>2026-07-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/categories/"
+                href="https://www.yitaohe.com/zh/blogs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/categories/"
+                href="https://www.yitaohe.com/blogs/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blogs/example-post-1/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
+    <loc>https://www.yitaohe.com/categories/</loc>
+    <lastmod>2026-07-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/blogs/%E7%A4%BA%E4%BE%8B%E6%96%87%E7%AB%A0%E4%B8%80/"
+                href="https://www.yitaohe.com/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/blogs/example-post-1/"
+                href="https://www.yitaohe.com/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/blogs/example-post-2/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
+    <loc>https://www.yitaohe.com/</loc>
+    <lastmod>2026-07-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/blogs/%E7%A4%BA%E4%BE%8B%E6%96%87%E7%AB%A0%E4%BA%8C/"
+                href="https://www.yitaohe.com/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/blogs/example-post-2/"
+                href="https://www.yitaohe.com/"
                 />
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
+    <loc>https://www.yitaohe.com/tags/indie-hacking/</loc>
+    <lastmod>2026-07-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.yitaohe.com/tags/mvp/</loc>
+    <lastmod>2026-07-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/"
+                href="https://www.yitaohe.com/zh/tags/mvp/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/"
+                href="https://www.yitaohe.com/tags/mvp/"
                 />
   </url><url>
-    <loc>http://localhost:1313/categories/life/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
+    <loc>https://www.yitaohe.com/categories/project-recap/</loc>
+    <lastmod>2026-07-23T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://www.yitaohe.com/updates/2026-07-23-first-blog/</loc>
+    <lastmod>2026-07-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/categories/life/"
+                href="https://www.yitaohe.com/zh/updates/2026-07-23-first-blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/categories/life/"
+                href="https://www.yitaohe.com/updates/2026-07-23-first-blog/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/placeholder/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
+    <loc>https://www.yitaohe.com/tags/seo/</loc>
+    <lastmod>2026-07-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/tags/placeholder/"
+                href="https://www.yitaohe.com/zh/tags/seo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/placeholder/"
+                href="https://www.yitaohe.com/tags/seo/"
                 />
   </url><url>
-    <loc>http://localhost:1313/categories/system-design/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
+    <loc>https://www.yitaohe.com/tags/</loc>
+    <lastmod>2026-07-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/categories/system-design/"
+                href="https://www.yitaohe.com/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/categories/system-design/"
+                href="https://www.yitaohe.com/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-02-24T00:00:00+00:00</lastmod>
+    <loc>https://www.yitaohe.com/updates/</loc>
+    <lastmod>2026-07-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/tags/"
+                href="https://www.yitaohe.com/zh/updates/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/tags/"
+                href="https://www.yitaohe.com/updates/"
                 />
   </url><url>
-    <loc>http://localhost:1313/comments/</loc>
+    <loc>https://www.yitaohe.com/comments/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/comments/"
+                href="https://www.yitaohe.com/zh/comments/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/comments/"
+                href="https://www.yitaohe.com/comments/"
                 />
   </url><url>
-    <loc>http://localhost:1313/overview/</loc>
+    <loc>https://www.yitaohe.com/overview/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://localhost:1313/zh/overview/"
+                href="https://www.yitaohe.com/zh/overview/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://localhost:1313/overview/"
+                href="https://www.yitaohe.com/overview/"
                 />
   </url>
 </urlset>

@@ -8,12 +8,28 @@ home = "Home"
 overview = "Overview"
 blogs = "Blogs"
 comments = "Comments"
+updates = "Updates"
 switchLanguage = "Language"
 
 [overview]
-featured = "Featured posts"
+latestPosts = "Latest posts"
+noPosts = "No posts yet."
 education = "Education"
 career = "Career"
+
+[home]
+placeholder = "Coming soon"
+avatarAlt = "Panda avatar"
+
+[contact]
+emailCopied = "Email copied to clipboard"
+
+[updates]
+eyebrow = "Now"
+latest = "Latest update"
+viewAll = "All updates"
+filterLabel = "Filter by month"
+empty = "No updates yet."
 
 [lang]
 en = "EN"

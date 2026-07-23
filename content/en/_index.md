@@ -6,4 +6,4 @@ translationKey: "home"
 
 This is my corner of the internet. I write about systems, technology, and the things I'm learning along the way.
 
-Visit [Overview](/en/overview/) to learn more, or head to [Blogs](/en/blogs/) to read articles and notes.
+Visit [Overview](/overview/) to learn more, or head to [Blogs](/blogs/) to read articles and notes.

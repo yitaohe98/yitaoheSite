@@ -1,0 +1,41 @@
+{{ define "main" }}
+  <section class="section section-updates">
+    <div class="container container-updates">
+      <header class="page-header updates-page-header">
+        <div>
+          <h1 class="page-title">{{ .Title }}</h1>
+          {{ with .Content }}
+            <div class="page-intro">{{ . }}</div>
+          {{ end }}
+        </div>
+
+        {{ $months := slice }}
+        {{ range .Pages.ByDate.Reverse }}
+          {{ $month := .Date.Format "2006-01" }}
+          {{ if not (in $months $month) }}
+            {{ $months = $months | append $month }}
+          {{ end }}
+        {{ end }}
+
+        {{ if $months }}
+          <label class="updates-filter">
+            <span>{{ i18n "updates.filterLabel" }}</span>
+            <select class="updates-month-select" data-updates-filter>
+              {{ range $months }}
+                <option value="{{ . }}">{{ . }}</option>
+              {{ end }}
+            </select>
+          </label>
+        {{ end }}
+      </header>
+
+      <div class="updates-feed" data-updates-feed>
+        {{ range .Pages.ByDate.Reverse }}
+          {{ partial "update-card.html" . }}
+        {{ else }}
+          <p class="updates-empty">{{ i18n "updates.empty" }}</p>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

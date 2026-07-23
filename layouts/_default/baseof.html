@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Language.LanguageCode }}">
   {{ partial "head-meta.html" . }}
-  <body class="site-body">
+  <body class="site-body" data-email-copied="{{ i18n "contact.emailCopied" }}">
     {{ partial "header.html" . }}
     <main class="site-main">
       {{ block "main" . }}{{ end }}
@@ -10,4 +10,3 @@
     <script src="/js/site.js"></script>
   </body>
 </html>
-
