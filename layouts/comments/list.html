@@ -1,6 +1,24 @@
 {{ define "main" }}
+  {{ $turnstileSiteKey := .Site.Params.turnstileSiteKey | default "" }}
   <section class="section">
-    <div class="container">
+    <div
+      class="container container-comments"
+      data-comments-app
+      data-locale="{{ .Language.Locale }}"
+      data-loading="{{ i18n "comments.loading" }}"
+      data-empty="{{ i18n "comments.empty" }}"
+      data-load-error="{{ i18n "comments.loadError" }}"
+      data-submitting="{{ i18n "comments.submitting" }}"
+      data-published="{{ i18n "comments.published" }}"
+      data-pending="{{ i18n "comments.pending" }}"
+      data-invalid-input="{{ i18n "comments.invalidInput" }}"
+      data-verification-failed="{{ i18n "comments.verificationFailed" }}"
+      data-rate-limited="{{ i18n "comments.rateLimited" }}"
+      data-moderation-rejected="{{ i18n "comments.moderationRejected" }}"
+      data-service-not-configured="{{ i18n "comments.serviceNotConfigured" }}"
+      data-server-error="{{ i18n "comments.serverError" }}"
+      data-turnstile-required="{{ i18n "comments.turnstileRequired" }}"
+    >
       <header class="page-header">
         <h1 class="page-title">{{ .Title }}</h1>
         {{ with .Params.description }}
@@ -8,9 +26,107 @@
         {{ end }}
       </header>
 
-      <div class="page-content">
+      <div class="page-content comments-intro">
         {{ .Content }}
+      </div>
+
+      <div class="comments-layout">
+        <section class="comments-panel comments-compose" aria-labelledby="comment-form-title">
+          <div class="comments-panel-header">
+            <span class="comments-eyebrow">{{ i18n "comments.guestbook" }}</span>
+            <h2 id="comment-form-title" class="comments-panel-title">{{ i18n "comments.leaveComment" }}</h2>
+          </div>
+
+          <form class="comment-form" data-comment-form novalidate>
+            <div class="comment-field">
+              <label for="comment-display-name">{{ i18n "comments.displayName" }}</label>
+              <input
+                id="comment-display-name"
+                name="displayName"
+                type="text"
+                autocomplete="name"
+                aria-describedby="comment-name-help"
+                required
+              />
+              <div class="comment-field-meta">
+                <span id="comment-name-help">{{ i18n "comments.displayNameHelp" }}</span>
+                <span data-name-count aria-live="polite">0/40</span>
+              </div>
+            </div>
+
+            <div class="comment-field">
+              <label for="comment-body">{{ i18n "comments.comment" }}</label>
+              <textarea
+                id="comment-body"
+                name="body"
+                rows="5"
+                aria-describedby="comment-body-help"
+                required
+              ></textarea>
+              <div class="comment-field-meta">
+                <span id="comment-body-help">{{ i18n "comments.commentHelp" }}</span>
+                <span data-body-count aria-live="polite">0/200</span>
+              </div>
+            </div>
+
+            <div class="comment-honeypot" aria-hidden="true">
+              <label for="comment-website">Website</label>
+              <input id="comment-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <p class="comment-privacy-note">{{ i18n "comments.publicNotice" }}</p>
+
+            {{ if $turnstileSiteKey }}
+              <div
+                class="cf-turnstile"
+                data-sitekey="{{ $turnstileSiteKey }}"
+                data-action="comment_submit"
+                data-theme="light"
+                data-size="flexible"
+                data-error-callback="onCommentTurnstileError"
+                data-expired-callback="onCommentTurnstileExpired"
+              ></div>
+            {{ else }}
+              <p class="comment-setup-note" role="note">{{ i18n "comments.turnstileNotConfigured" }}</p>
+            {{ end }}
+
+            <button
+              class="button button-primary comment-submit"
+              type="submit"
+              data-comment-submit
+              {{ if not $turnstileSiteKey }}disabled{{ end }}
+            >
+              {{ i18n "comments.submit" }}
+            </button>
+
+            <p class="comment-form-status" data-comment-status role="status" aria-live="polite" tabindex="-1"></p>
+          </form>
+        </section>
+
+        <section class="comments-panel comments-feed-panel" aria-labelledby="comments-feed-title">
+          <div class="comments-panel-header comments-feed-header">
+            <div>
+              <span class="comments-eyebrow">{{ i18n "comments.community" }}</span>
+              <h2 id="comments-feed-title" class="comments-panel-title">{{ i18n "comments.recentComments" }}</h2>
+            </div>
+          </div>
+
+          <p class="comments-feed-state" data-comments-state role="status" aria-live="polite">
+            {{ i18n "comments.loading" }}
+          </p>
+          <ol class="comments-list" data-comments-list hidden></ol>
+          <button class="button button-ghost comments-more" type="button" data-comments-more hidden>
+            {{ i18n "comments.loadOlder" }}
+          </button>
+          <noscript>
+            <p class="comments-feed-state">{{ i18n "comments.javascriptRequired" }}</p>
+          </noscript>
+        </section>
       </div>
     </div>
   </section>
+
+  {{ if $turnstileSiteKey }}
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  {{ end }}
 {{ end }}

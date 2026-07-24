@@ -1,0 +1,16 @@
+name = "yitaohe-site"
+pages_build_output_dir = "./public"
+compatibility_date = "2026-07-24"
+
+# Copy this file to wrangler.toml only after replacing the database ID.
+# Existing Cloudflare Pages projects can instead configure the same bindings
+# in the dashboard, which avoids changing the project's configuration source.
+
+[[d1_databases]]
+binding = "COMMENTS_DB"
+database_name = "yitaohe-comments"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[ai]
+binding = "AI"
+remote = true

@@ -1,2 +1,11 @@
 # Hugo
 .hugo_build.lock
+/public/
+
+# Cloudflare local state and secrets
+.wrangler/
+.dev.vars
+wrangler.toml
+
+# Comment database exports
+backups/comments/*.sql

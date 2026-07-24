@@ -12,7 +12,9 @@ This repository implements the v1.0 architecture for **yitaohe.com** as defined 
 ## Principles
 
 - **Static-first**: all pages are generated at build time.
-- **No runtime backend**: no database or application server is required to serve the site.
+- **Static-first runtime**: authored pages require no application server. A
+  narrowly scoped Cloudflare Pages Function and D1 database power the optional
+  guestbook API under `/api/comments`.
 - **Content in Git**: all posts and pages live inside `content/` and are versioned with the code.
 - **Separation of concerns**:
   - `content/` holds Markdown content (per-language folders `zh/`, `en/`).
@@ -38,6 +40,9 @@ This repository implements the v1.0 architecture for **yitaohe.com** as defined 
 
 - **robots.txt** in `static/` is copied to the site root; it allows all crawlers and points to the sitemap.
 - HTTPS and security headers are the responsibility of the host (Cloudflare).
+- Guestbook submissions require server-validated Turnstile, prepared D1
+  statements, plain-text rendering, moderation, and an approximate per-minute
+  submission limit.
 
 ## Extending the site
 
