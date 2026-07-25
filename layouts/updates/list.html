@@ -6,9 +6,6 @@
         {{ with .Params.description }}
           <p class="page-subtitle">{{ . }}</p>
         {{ end }}
-        {{ with .Content }}
-          <div class="page-intro">{{ . }}</div>
-        {{ end }}
       </header>
 
       {{ $months := slice }}

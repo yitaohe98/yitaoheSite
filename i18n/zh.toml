@@ -27,7 +27,6 @@ avatarAlt = "熊猫头像"
 emailCopied = "邮箱地址已复制"
 
 [updates]
-eyebrow = "最近"
 latest = "最近在做什么"
 viewAll = "看看全部近况"
 filterLabel = "看看哪个月"

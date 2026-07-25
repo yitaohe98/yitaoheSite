@@ -27,7 +27,6 @@ avatarAlt = "Panda avatar"
 emailCopied = "Email copied to clipboard"
 
 [updates]
-eyebrow = "Now"
 latest = "Latest update"
 viewAll = "All updates"
 filterLabel = "Filter by month"

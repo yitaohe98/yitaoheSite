@@ -17,16 +17,16 @@ translationKey: "overview"
 - [GitHub](https://github.com/yitaohe98)
 - <a href="#" onclick="copyEmail(); return false;">Email</a>
 
-## 这些年去过的地方
+## 城市足迹
 
 上海 → 香槟 → 圣何塞 → 上海
 
-## 读过的学校
+## 求学经历
 
 - 上海交通大学，本科（2016–2020）
 - 伊利诺伊大学厄巴纳-香槟分校，硕士（2021–2022）
 
-## 做过的工作
+## 职业经历
 
 - 2020–2021：上海银行，软件开发
 - 2023–2026：Zscaler，网络安全后端开发
