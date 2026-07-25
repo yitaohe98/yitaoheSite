@@ -1,5 +1,9 @@
 # 004 - Serverless guestbook comments
 
+The original design specification, including detailed requirements and
+architecture diagrams, is preserved in
+[`../design/yitaohe-comments-design-doc-v1.0.docx`](../design/yitaohe-comments-design-doc-v1.0.docx).
+
 ## Decision
 
 The `/comments/` and `/zh/comments/` pages share one anonymous guestbook backed

@@ -56,6 +56,8 @@ util/
 docs/
   v1.0prd.md
   architecture.md
+  design/
+    yitaohe-comments-design-doc-v1.0.docx
   roadmap.md
   translation.md
   testcases.md
@@ -85,4 +87,6 @@ On `git push`, Cloudflare Pages builds and deploys the site.
 
 The guestbook additionally requires D1, Workers AI, Turnstile, and runtime
 secrets. See `docs/comments-operations.md` for setup, moderation, backup, and
-restore procedures.
+restore procedures. The original guestbook specification, including its
+architecture diagrams and detailed requirements, is preserved in
+[`docs/design/yitaohe-comments-design-doc-v1.0.docx`](docs/design/yitaohe-comments-design-doc-v1.0.docx).
