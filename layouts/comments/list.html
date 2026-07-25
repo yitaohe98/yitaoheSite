@@ -26,15 +26,30 @@
         {{ end }}
       </header>
 
-      <div class="page-content comments-intro">
-        {{ .Content }}
-      </div>
-
       <div class="comments-layout">
+        <section class="comments-panel comments-feed-panel" aria-labelledby="comments-feed-title">
+          <div class="comments-panel-header comments-feed-header">
+            <h2 id="comments-feed-title" class="comments-panel-title">{{ i18n "comments.recentComments" }}</h2>
+          </div>
+
+          <p class="comments-feed-state" data-comments-state role="status" aria-live="polite">
+            {{ i18n "comments.loading" }}
+          </p>
+          <ol class="comments-list" data-comments-list hidden></ol>
+          <button class="button button-ghost comments-more" type="button" data-comments-more hidden>
+            {{ i18n "comments.loadOlder" }}
+          </button>
+          <noscript>
+            <p class="comments-feed-state">{{ i18n "comments.javascriptRequired" }}</p>
+          </noscript>
+        </section>
+
         <section class="comments-panel comments-compose" aria-labelledby="comment-form-title">
           <div class="comments-panel-header">
-            <span class="comments-eyebrow">{{ i18n "comments.guestbook" }}</span>
             <h2 id="comment-form-title" class="comments-panel-title">{{ i18n "comments.leaveComment" }}</h2>
+            <div class="page-content comments-intro">
+              {{ .Content }}
+            </div>
           </div>
 
           <form class="comment-form" data-comment-form novalidate>
@@ -45,6 +60,7 @@
                 name="displayName"
                 type="text"
                 autocomplete="name"
+                placeholder="{{ i18n "comments.displayNamePlaceholder" }}"
                 aria-describedby="comment-name-help"
                 required
               />
@@ -59,7 +75,8 @@
               <textarea
                 id="comment-body"
                 name="body"
-                rows="5"
+                rows="6"
+                placeholder="{{ i18n "comments.commentPlaceholder" }}"
                 aria-describedby="comment-body-help"
                 required
               ></textarea>
@@ -101,26 +118,6 @@
 
             <p class="comment-form-status" data-comment-status role="status" aria-live="polite" tabindex="-1"></p>
           </form>
-        </section>
-
-        <section class="comments-panel comments-feed-panel" aria-labelledby="comments-feed-title">
-          <div class="comments-panel-header comments-feed-header">
-            <div>
-              <span class="comments-eyebrow">{{ i18n "comments.community" }}</span>
-              <h2 id="comments-feed-title" class="comments-panel-title">{{ i18n "comments.recentComments" }}</h2>
-            </div>
-          </div>
-
-          <p class="comments-feed-state" data-comments-state role="status" aria-live="polite">
-            {{ i18n "comments.loading" }}
-          </p>
-          <ol class="comments-list" data-comments-list hidden></ol>
-          <button class="button button-ghost comments-more" type="button" data-comments-more hidden>
-            {{ i18n "comments.loadOlder" }}
-          </button>
-          <noscript>
-            <p class="comments-feed-state">{{ i18n "comments.javascriptRequired" }}</p>
-          </noscript>
         </section>
       </div>
     </div>
