@@ -1,0 +1,3 @@
+TURNSTILE_SECRET_KEY=replace-with-turnstile-secret
+RATE_LIMIT_SECRET=replace-with-a-long-random-secret
+TURNSTILE_ALLOW_TEST_KEYS=true

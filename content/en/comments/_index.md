@@ -1,14 +1,7 @@
 ---
-title: "Comments & Contact"
-description: "How to reach out or share feedback about posts."
+title: "Guestbook"
+description: "Leave a short note, question, or piece of feedback."
 translationKey: "comments"
 ---
 
-For v1.0, this page is a static placeholder — no interactive comment system yet.
-
-If you have feedback, questions, or ideas:
-
-- Open an issue on GitHub (placeholder link).
-- Send me an email (placeholder address).
-
-In future versions, this page may evolve into a lightweight comment or discussion system while keeping the static-first architecture.
+Comments are shown exactly as written. The interface is bilingual, but visitor comments are not automatically translated.

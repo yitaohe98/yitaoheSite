@@ -1,7 +1,10 @@
 baseURL = "https://www.yitaohe.com/"
-languageCode = "zh-cn"
+locale = "zh-cn"
 title = "yitaohe.com"
 defaultContentLanguage = "en"
+
+[params]
+  turnstileSiteKey = ""
 
 [taxonomies]
   category = "categories"
@@ -20,19 +23,18 @@ defaultContentLanguage = "en"
 
 [languages.zh]
   contentDir = "content/zh"
-  languageCode = "zh-cn"
+  locale = "zh-cn"
   weight = 1
-  languageName = "中文"
+  label = "中文"
   title = "yitaohe.com"
 
 [languages.en]
   contentDir = "content/en"
-  languageCode = "en"
+  locale = "en"
   weight = 2
-  languageName = "English"
+  label = "English"
   title = "yitaohe.com"
 
 [sitemap]
   changefreq = "weekly"
   priority = 0.5
-

@@ -1,21 +1,30 @@
 {{ define "main" }}
-  <section class="section section-hero">
-    <div class="container hero-layout">
-      <div class="hero-text overview-content">
-        {{ .Content }}
-      </div>
+  <section class="section section-hero overview-page">
+    <div class="container container-overview">
+      <header class="page-header unified-page-header">
+        <h1 class="page-title">{{ .Title }}</h1>
+        {{ with .Params.description }}
+          <p class="page-subtitle">{{ . }}</p>
+        {{ end }}
+      </header>
 
-      <div class="hero-panel">
-        <h2 class="panel-title">{{ i18n "overview.latestPosts" }}</h2>
-        <div class="panel-list">
-          {{ $blogs := where (where .Site.RegularPages "Section" "blogs") "Lang" .Lang }}
-          {{ if gt (len $blogs) 0 }}
-            {{ range first 3 $blogs.ByDate.Reverse }}
-              {{ partial "blog-card.html" . }}
+      <div class="hero-layout overview-layout">
+        <div class="hero-text overview-content">
+          {{ .Content }}
+        </div>
+
+        <div class="hero-panel overview-latest">
+          <h2 class="panel-title">{{ i18n "overview.latestPosts" }}</h2>
+          <div class="panel-list">
+            {{ $blogs := where (where .Site.RegularPages "Section" "blogs") "Lang" .Lang }}
+            {{ if gt (len $blogs) 0 }}
+              {{ range first 3 $blogs.ByDate.Reverse }}
+                {{ partial "blog-card.html" . }}
+              {{ end }}
+            {{ else }}
+              <p class="panel-empty">{{ i18n "overview.noPosts" }}</p>
             {{ end }}
-          {{ else }}
-            <p class="panel-empty">{{ i18n "overview.noPosts" }}</p>
-          {{ end }}
+          </div>
         </div>
       </div>
     </div>

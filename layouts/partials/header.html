@@ -21,7 +21,7 @@
           {{ end }}
           {{ range $pages }}
             <li role="none">
-              <a href="{{ .Permalink }}" class="nav-lang-menu-link{{ if eq $current.Lang .Lang }} nav-lang-menu-link-current{{ end }}" role="menuitem">{{ default .Language.LanguageName (i18n (printf "langName.%s" .Lang)) }}</a>
+              <a href="{{ .Permalink }}" class="nav-lang-menu-link{{ if eq $current.Lang .Lang }} nav-lang-menu-link-current{{ end }}" role="menuitem">{{ default .Language.Label (i18n (printf "langName.%s" .Lang)) }}</a>
             </li>
           {{ end }}
         </ul>

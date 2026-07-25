@@ -57,8 +57,18 @@ Test cases derived from the Product Requirements Document for yitaohe.com. Use t
 
 | ID   | Requirement / Source | Test case | Expected result |
 |------|----------------------|-----------|------------------|
-| C-01 | §6.4 Static           | Open Comments page. | Page loads; no client-side comment form or live comments. |
-| C-02 | §6.4 Contact method   | On Comments page, look for contact info. | At least one contact method (e.g. GitHub, email) is provided. |
+| C-01 | Guestbook form | Open Comments page. | Display-name field, comment field, character counters, Turnstile, and submit button are present. |
+| C-02 | Public feed | Open Comments page with approved D1 records. | Approved comments load newest first; internal moderation data is absent. |
+| C-03 | Bilingual UI | Compare `/comments/` and `/zh/comments/`. | All form, loading, success, pending, and error messages use the current page language. |
+| C-04 | Input limits | Submit blank, whitespace-only, over-40-character name, and over-200-character comment values. | Client and server reject every invalid value. |
+| C-05 | Turnstile | Submit with missing, invalid, expired, and reused tokens. | Each submission is rejected before AI moderation or comment storage. |
+| C-06 | Approximate rate limit | Submit twice from one network identity during the same minute bucket. | First attempt proceeds; second receives HTTP 429 and a localized message. |
+| C-07 | Chinese moderation | Submit safe Chinese text. | Text is translated to English for moderation, but the stored/public comment remains the original Chinese. |
+| C-08 | Moderation failure | Make translation or moderation unavailable. | Comment is stored privately as `pending`; visitor receives the localized pending-review prompt. |
+| C-09 | Unsafe content | Submit input classified as unsafe. | Request is rejected and the comment text is not stored. |
+| C-10 | Cursor pagination | Load more than 20 approved comments while new comments arrive. | Older pages contain no duplicate or skipped records. |
+| C-11 | Plain-text rendering | Submit HTML/script-shaped text through a test fixture. | Content is rendered with `textContent` and never executes. |
+| C-12 | Moderation operations | Approve pending, hide approved, restore hidden, and permanently delete test records. | Public visibility matches each documented state transition. |
 
 ---
 
@@ -91,7 +101,7 @@ Test cases derived from the Product Requirements Document for yitaohe.com. Use t
 |------|----------------------|-----------|------------------|
 | F-01 | §10 Lighthouse       | Run Lighthouse (Performance, Accessibility, Best Practices, SEO) on production or staging. | Overall score ≥ 95 (or per-category as agreed). |
 | F-02 | §10 First contentful paint | Measure FCP (e.g. Lighthouse or DevTools). | FCP < 1 second on a typical connection. |
-| F-03 | §10 No runtime backend | Deploy site and use it (navigate, open posts). | No runtime server or DB required; static hosting only. |
+| F-03 | §10 Static-first runtime | Deploy site and use it (navigate, open posts). | Authored pages remain static; only `/api/*` invokes the guestbook Function. |
 | F-04 | §10 CDN / stability   | If deployed (e.g. Cloudflare Pages), confirm CDN and availability. | Site is served via CDN; no unnecessary origin dependency. |
 
 ---
@@ -103,7 +113,7 @@ Test cases derived from the Product Requirements Document for yitaohe.com. Use t
 | W-01 | §7.1 Local preview    | Run `hugo server` from repo root. | Site builds and is served locally (e.g. localhost:1313). |
 | W-02 | §7.1 Build            | Run `hugo` (no server). | `public/` (or configured output) is generated without errors. |
 | W-03 | §7.2 Content in Git   | Confirm all content lives under `content/` and is committed. | No content only in a DB or external CMS for MVP. |
-| W-04 | §7.2 No runtime API   | Search codebase for runtime API calls (fetch to own backend, auth). | No such dependencies for core site content. |
+| W-04 | §7.2 Scoped runtime API | Search codebase for runtime API calls. | Only the guestbook uses the same-origin `/api/comments` endpoint; core site content has no runtime dependency. |
 
 ---
 
@@ -128,11 +138,11 @@ Test cases derived from the Product Requirements Document for yitaohe.com. Use t
 - **Overview:** O-01–O-05  
 - **Blogs listing:** B-01–B-05  
 - **Blog post:** P-01–P-05  
-- **Comments:** C-01–C-02  
+- **Comments:** C-01–C-12
 - **Content model:** M-01–M-04  
 - **SEO:** S-01–S-05  
 - **Non-functional:** F-01–F-04  
 - **Workflow:** W-01–W-04  
 - **Multi-language:** L-01–L-06  
 
-Total: **46 test cases** (adjust scope for MVP-only by skipping §10 or marking L-* as “post-MVP” if you treat multi-language as v1.2).
+Total: **56 test cases** (adjust scope for MVP-only by skipping §10 or marking L-* as “post-MVP” if you treat multi-language as v1.2).

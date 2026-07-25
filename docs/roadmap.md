@@ -17,6 +17,9 @@ This roadmap mirrors the product roadmap defined in the v1.0 PRD.
 
 - **Multi-language support (EN/中文)** — Implemented (content/zh, content/en, i18n, language switcher, default-language util).
 - **Views / Likes** — Not yet; to use serverless without breaking static architecture.
+- **Guestbook comments** — Implemented in source; Cloudflare D1, Workers AI,
+  Turnstile, secrets, and production migration must be configured before
+  launch.
 
 ## Later
 

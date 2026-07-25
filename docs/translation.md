@@ -42,7 +42,7 @@ This document captures the translation and multi-language design for yitaohe.com
 
 - **Chinese (default):** Root paths — `/`, `/overview/`, `/blogs/...`, `/comments/`.
 - **English:** Under `/en/` — `/en/`, `/en/overview/`, `/en/blogs/...`, `/en/comments/`.
-- Config in `config.toml`: `[languages]` with `zh` as default and `en` with appropriate `weight` and `languageName`.
+- Config in `config.toml`: `[languages]` with `zh` as default and `en` with appropriate `weight` and `label`.
 
 ### 3.2 Content folders
 
@@ -171,14 +171,16 @@ terms:
 
 ---
 
-## 11. User comments (future)
+## 11. User comments
 
-- **User-generated comments** are different from authored posts: they arrive at **runtime** via a comment service (e.g. Giscus, serverless API). Hugo does not pre-translate them.
-- **Recommended model** for the comment backend:
-  - Store per comment: `originalLanguage`, `originalText`, and a `translations` map (e.g. `translations.zh`, `translations.en`).
-  - When a comment is created: detect language; call the same style of AI translation (with glossary) to fill the other language(s); optionally set `translationStatus`.
-  - On the site: for a given page language, show the translation for that language if present, otherwise show the original and optionally a “show original” toggle.
-- So: **translation for comments** happens in the **runtime comment service**, not in Hugo’s static content pipeline. The rules and glossary approach can be reused there.
+- User-generated comments arrive at runtime through the Pages Function; Hugo
+  does not process or translate them.
+- The English and Chinese pages share one guestbook.
+- Comments are stored and displayed exactly as submitted.
+- Chinese or mixed Chinese/English input is translated to English only for
+  automated safety moderation. The translation is not stored or displayed.
+- All guestbook controls, states, and error messages come from the regular
+  Hugo i18n files.
 
 ---
 

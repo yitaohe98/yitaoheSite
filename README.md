@@ -10,6 +10,7 @@ Personal site for **Yitao He** — technical blog and personal brand, powered by
 - **Assets** — CSS, JS, favicon, and `robots.txt` in `static/`
 - **i18n** — UI strings in `i18n/` (en.toml, zh-cn.toml, zh.toml for language switcher and nav)
 - **Docs** — PRD, architecture, roadmap, translation design, test cases in `docs/`
+- **Guestbook** — Pages Function + D1 comments with Turnstile and Workers AI moderation
 - **Util** — `util/set_default_lang.py` to switch default site language (zh/en)
 
 ## URL scheme
@@ -81,3 +82,7 @@ To change the default language (which version appears at `/`):
 - **Output directory:** `public`
 
 On `git push`, Cloudflare Pages builds and deploys the site.
+
+The guestbook additionally requires D1, Workers AI, Turnstile, and runtime
+secrets. See `docs/comments-operations.md` for setup, moderation, backup, and
+restore procedures.
