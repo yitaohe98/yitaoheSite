@@ -110,6 +110,8 @@ body {
 }
 
 body.site-body {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background: var(--body-background);
   color: var(--fg);
@@ -309,6 +311,7 @@ body.site-body {
 }
 
 .site-main {
+  flex: 1 0 auto;
   padding-bottom: 48px;
 }
 
@@ -1131,6 +1134,10 @@ body.site-body {
   font-variant-numeric: tabular-nums;
 }
 
+.comment-field-meta-count-only {
+  justify-content: flex-end;
+}
+
 .comment-field-meta .is-over-limit {
   color: var(--error);
   font-weight: 700;
@@ -1285,6 +1292,7 @@ body.site-body {
 }
 
 .site-footer {
+  flex: 0 0 auto;
   border-top: 1px solid var(--border-subtle);
   background: var(--bg-subtle);
   padding: 14px 0 18px;

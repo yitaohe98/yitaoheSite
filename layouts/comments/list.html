@@ -66,9 +66,6 @@
         >
           <div class="comments-panel-header">
             <h2 id="comment-form-title" class="comments-panel-title">{{ i18n "comments.leaveComment" }}</h2>
-            <div class="page-content comments-intro">
-              {{ .Content }}
-            </div>
           </div>
 
           <form class="comment-form" data-comment-form novalidate>
@@ -96,11 +93,9 @@
                 name="body"
                 rows="6"
                 placeholder="{{ i18n "comments.commentPlaceholder" }}"
-                aria-describedby="comment-body-help"
                 required
               ></textarea>
-              <div class="comment-field-meta">
-                <span id="comment-body-help">{{ i18n "comments.commentHelp" }}</span>
+              <div class="comment-field-meta comment-field-meta-count-only">
                 <span data-body-count aria-live="polite">0/200</span>
               </div>
             </div>
