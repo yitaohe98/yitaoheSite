@@ -8,6 +8,8 @@
           {{ end }}
           <span class="meta-dot">·</span>
           <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+          <span class="meta-dot">·</span>
+          <span>{{ printf (i18n "article.readingTime") .ReadingTime }}</span>
         </div>
         <h1 class="article-title">{{ .Title }}</h1>
         {{ with .Params.description }}
@@ -15,9 +17,12 @@
         {{ end }}
       </header>
 
-      <div class="article-toc">
-        {{ .TableOfContents }}
-      </div>
+      {{ $toc := .TableOfContents }}
+      {{ if in $toc "<li>" }}
+        <div class="article-toc">
+          {{ $toc }}
+        </div>
+      {{ end }}
 
       <div class="article-content">
         {{ .Content }}
@@ -25,4 +30,3 @@
     </div>
   </article>
 {{ end }}
-

@@ -9,88 +9,80 @@ draft: false
 translationKey: "25-hours-30-dollars"
 ---
 
-I spent four days building and launching a small browser-game website.
+Over four days, I spent about 25 hours and $30 taking a small browser-game website from idea to launch.
 
-The total cost was:
+The budget was simple:
 
-- 25 hours of work
+- About 25 hours of work
 - $10 for the domain
-- $20 in AI coding tokens
+- $20 for AI coding tools
 
-The idea came from a video claiming that a Mahjong Solitaire website in Romania was generating $5,000–$20,000 in monthly recurring revenue. I could not verify the revenue claim, but the underlying demand appeared real: established competitors showed up in search, and there was clearly an active audience for the games.
+The project started with a video about a Mahjong Solitaire website in Romania. It claimed the site was making $5,000–$20,000 a month. I could not verify that number, but the category itself was clearly active: established competitors ranked in search, and people were playing these games.
 
-To differentiate the project, I wrapped the games with Asian cultural elements and related SEO content. The assumption was that this could attract Western users interested in Asian games and culture.
+My angle was to pair the games with explanations of their rules, symbols, and Asian cultural background. I hoped that would give the site a clearer identity and create useful search content around the games.
 
-## The hardest part was not building
+## Building was the easy part
 
-About half of the time went into building, testing, and tuning the games. There was plenty of implementation friction: AI-generated code misunderstood game rules, computer opponents got stuck, prompts required repeated refinement, and visual assets needed licence checks.
+Roughly half of the 25 hours went into building, testing, and tuning the games. The work was not frictionless. AI-generated code misunderstood rules, computer opponents got stuck, prompts needed several rounds of refinement, and visual assets had to be checked for licensing.
 
-But these were not the important problems. They were solvable engineering details.
+Still, those were ordinary engineering problems. Given enough time, I could work through them.
 
-The real challenge was deciding how users would find the website.
+The harder question was where the users would come from.
 
-That question affected the topic, positioning, domain, content, and overall direction. I knew people played these games, but I had not validated whether my specific SEO angle could attract traffic. I should have checked:
+That question shaped almost every other decision: the topic, positioning, domain, content, and how much of the product was worth building. I knew there was demand for the games, but I had not shown that my site could reach it.
+
+Before writing code, I should have looked more closely at:
 
 - Search volume and keyword trends
-- Ranking difficulty and competitor strength
-- Long-tail opportunities
-- Areas where existing products were weak
+- The strength of the sites already ranking
+- Long-tail searches a smaller site could target
+- Gaps in the existing products and content
 
-Instead, I relied mainly on the video, visible competitors, and the assumption that proven demand would leave room for another product.
+Instead, I relied on the video, visible competitors, and a loose assumption that proven demand meant there was room for one more site.
 
-That assumption weakened while I was building. Once I became less confident that SEO could bring users, further polishing felt less meaningful.
+My confidence in that assumption dropped as the project went on. Once the traffic path felt uncertain, another round of interface polish no longer seemed especially valuable.
 
-This became the main lesson:
+> A market can be real without being reachable for a new product.
 
-> Proven product demand does not prove that a new product has a viable acquisition channel.
+## Where I drew the line
 
-## Knowing when to stop
+I could have kept tuning the computer opponents, adding content, and polishing the interface. I decided to stop at a version that was playable and measurable.
 
-I considered spending more time tuning the computer opponents and improving the interface. I stopped instead.
+Without real users, I could not know which game mattered most, whether the difficulty felt right, or which feature deserved another day of work. More polish would mostly have reflected my guesses.
 
-Without users, I did not know which game mattered, whether the difficulty was appropriate, what brought people to the site, or which feature deserved more work. The MVP only needed to be playable and measurable.
+I added analytics and a daily check for search traffic, human activity, and returning visitors. The first week is mainly about confirming that indexing and tracking work. Search impressions and rankings will take longer, so I plan to watch the site for one to three months without adding much more development time.
 
-I added analytics and automated daily monitoring to track search traffic, human activity, and returning users. The first week is mainly an indexing and technical check. Search impressions and rankings may take longer, so I will monitor the site for one to three months while investing little additional effort.
+For now, the rules are:
 
-For now, the project is in observation mode:
-
-- Fix meaningful bugs
+- Fix bugs that affect play, indexing, or measurement
 - Keep the site online
-- Collect data
-- Continue only if users arrive, engage, or return
+- Collect enough data to see whether anyone arrives and returns
+- Invest again only when there is a real signal
 
-## What I would do differently
+## What I would validate first next time
 
-For my next MVP, I would validate distribution before building. I would first confirm:
+For the next MVP, I want to test the path to users before I build the product. That means answering a few questions early:
 
-1. Whether people are searching for the topic
-2. Whether a small site can realistically compete
-3. What existing products do well
-4. What they do poorly
-5. Whether there is a narrow entry point where I can be better
+1. Are people searching for this topic?
+2. Can a small new site realistically rank?
+3. What do the leading products already do well?
+4. Where are they noticeably weak?
+5. Is there a narrow entry point where I can offer something better?
 
-Competitor count alone is not enough. A few dominant sites may be harder to compete with than many weak ones.
+The number of competitors does not answer those questions. Three dominant sites can be harder to compete with than ten neglected ones.
 
-The better question is not only:
+The useful question is not only whether demand exists. It is whether I have a realistic way to reach it.
 
-> Does demand exist?
+## What 25 hours gave me
 
-It is:
+As a software engineer, my default instinct is to improve correctness, completeness, and technical quality. This project was a useful reminder that a product does not need to be finished before it meets the world.
 
-> Can I reach that demand?
-
-## What I learned
-
-My background is software engineering, where the instinct is often to improve correctness, completeness, and technical quality. This project helped weaken the instinct to build a perfect product before exposing it to users.
-
-In 25 hours, I moved through the full process:
+In 25 hours, I went through the whole loop:
 
 > idea → positioning → product → domain → deployment → payments → analytics → launch
 
-I also gained reusable experience with AI-assisted development, Cloudflare, Stripe, analytics, SEO, and user-acquisition thinking.
+I also came away with practical experience in AI-assisted development, Cloudflare, Stripe, analytics, SEO, and thinking more clearly about acquisition.
 
-The website has not proved that it can become a business. It may gain traffic, or it may remain a small experiment. Either result is useful.
+The site has not proved that it can become a business. It may find an audience, or it may remain a small experiment. Both outcomes will tell me something.
 
-The main outcome is that I now understand the 0–1 process more concretely. My next project should be faster, and my validation process should be better.
-
-The hardest part was not building the product. It was deciding how users would find it.
+What matters is that the 0–1 process is less abstract now. The next build should be faster, and the validation should start earlier.

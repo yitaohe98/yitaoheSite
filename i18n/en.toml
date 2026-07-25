@@ -32,6 +32,9 @@ viewAll = "All updates"
 filterLabel = "Filter by month"
 empty = "No updates yet."
 
+[article]
+readingTime = "about %d min read"
+
 [comments]
 guestbook = "Guestbook"
 leaveComment = "Leave a message"

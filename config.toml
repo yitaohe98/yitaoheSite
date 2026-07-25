@@ -23,6 +23,7 @@ defaultContentLanguage = "en"
 
 [languages.zh]
   contentDir = "content/zh"
+  hasCJKLanguage = true
   locale = "zh-cn"
   weight = 1
   label = "中文"
