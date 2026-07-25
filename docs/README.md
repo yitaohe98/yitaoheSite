@@ -8,4 +8,5 @@
 - **[test-results.md](test-results.md)** — Snapshot of the last automated test run.
 - **[comments-testing.md](comments-testing.md)** — Detailed local and feature-branch preview testing runbook for the comment feature.
 - **[comments-operations.md](comments-operations.md)** — Comment moderation, backup, restore, and removal operations.
+- **[comments-deployment-and-operations.md](comments-deployment-and-operations.md)** — Production Cloudflare setup, deployment, CRUD commands, backups, monitoring, secrets, and rollback.
 - **decisions/** — ADRs: static-first, Cloudflare Pages, Markdown workflow.
