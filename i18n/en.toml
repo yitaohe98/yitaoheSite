@@ -10,6 +10,8 @@ blogs = "Blogs"
 comments = "Comments"
 updates = "Updates"
 switchLanguage = "Language"
+switchToDark = "Switch to dark mode"
+switchToLight = "Switch to light mode"
 
 [overview]
 latestPosts = "Latest posts"

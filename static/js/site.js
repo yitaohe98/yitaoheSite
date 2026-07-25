@@ -4,6 +4,71 @@ function copyEmail() {
   alert(document.body.getAttribute('data-email-copied') || "Email copied to clipboard");
 }
 
+// Theme preference: follow the system initially, then remember an explicit choice.
+(function () {
+  var root = document.documentElement;
+  var toggle = document.querySelector('[data-theme-toggle]');
+  if (!toggle) return;
+
+  var storageKey = 'yitaohe-theme';
+  var media = window.matchMedia('(prefers-color-scheme: dark)');
+  var themeColor = document.querySelector('[data-theme-color]');
+
+  function savedTheme() {
+    try {
+      var saved = localStorage.getItem(storageKey);
+      return saved === 'light' || saved === 'dark' ? saved : null;
+    } catch (_error) {
+      return null;
+    }
+  }
+
+  function applyTheme(theme, remember) {
+    var isDark = theme === 'dark';
+    var nextLabel = toggle.getAttribute(
+      isDark ? 'data-label-light' : 'data-label-dark'
+    );
+
+    root.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+    toggle.setAttribute('aria-label', nextLabel);
+    toggle.setAttribute('title', nextLabel);
+
+    if (themeColor) {
+      themeColor.setAttribute('content', isDark ? '#11100f' : '#fafaf9');
+    }
+
+    if (remember) {
+      try {
+        localStorage.setItem(storageKey, isDark ? 'dark' : 'light');
+      } catch (_error) {
+        // The active page can still switch themes when storage is unavailable.
+      }
+    }
+  }
+
+  applyTheme(root.getAttribute('data-theme') || (media.matches ? 'dark' : 'light'), false);
+
+  toggle.addEventListener('click', function () {
+    applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark', true);
+  });
+
+  function followSystem(event) {
+    if (!savedTheme()) applyTheme(event.matches ? 'dark' : 'light', false);
+  }
+
+  if (typeof media.addEventListener === 'function') {
+    media.addEventListener('change', followSystem);
+  } else if (typeof media.addListener === 'function') {
+    media.addListener(followSystem);
+  }
+
+  window.addEventListener('storage', function (event) {
+    if (event.key !== storageKey) return;
+    applyTheme(savedTheme() || (media.matches ? 'dark' : 'light'), false);
+  });
+})();
+
 // Language dropdown: toggle on button click, close on outside click or link navigation.
 (function () {
   var dropdown = document.querySelector('.nav-lang-dropdown');

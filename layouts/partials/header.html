@@ -26,6 +26,19 @@
           {{ end }}
         </ul>
       </div>
+      <button
+        type="button"
+        class="nav-theme-toggle"
+        data-theme-toggle
+        data-label-light="{{ i18n "nav.switchToLight" }}"
+        data-label-dark="{{ i18n "nav.switchToDark" }}"
+        aria-label="{{ i18n "nav.switchToDark" }}"
+        aria-pressed="false"
+        title="{{ i18n "nav.switchToDark" }}"
+      >
+        <span class="theme-icon theme-icon-moon" aria-hidden="true">☾</span>
+        <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+      </button>
     </nav>
   </div>
 </header>

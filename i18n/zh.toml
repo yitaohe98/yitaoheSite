@@ -10,6 +10,8 @@ blogs = "博客"
 comments = "留言"
 updates = "动态"
 switchLanguage = "翻译/Language"
+switchToDark = "切换到深色模式"
+switchToLight = "切换到浅色模式"
 
 [overview]
 latestPosts = "最新文章"

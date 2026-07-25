@@ -1,6 +1,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#fafaf9" data-theme-color />
+  <script>
+    (function () {
+      var theme = "light";
+      try {
+        var savedTheme = localStorage.getItem("yitaohe-theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          theme = savedTheme;
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          theme = "dark";
+        }
+      } catch (_error) {
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          theme = "dark";
+        }
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+      document.querySelector("[data-theme-color]").setAttribute(
+        "content",
+        theme === "dark" ? "#11100f" : "#fafaf9"
+      );
+    })();
+  </script>
   <title>{{ with .Title }}{{ . }} · {{ end }}yitaohe.com</title>
   {{ with .Description }}
     <meta name="description" content="{{ . }}">
@@ -21,4 +45,3 @@
   <link rel="stylesheet" href="/css/site.css" />
   <link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}index.xml" title="yitaohe.com RSS" />
 </head>
-
