@@ -1,5 +1,5 @@
 ---
 title: "分类"
-description: "按分类浏览文章。"
+description: "想按主题找文章，可以从这里开始。"
 translationKey: "categories-index"
 ---

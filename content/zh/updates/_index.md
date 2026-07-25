@@ -1,7 +1,7 @@
 ---
-title: "动态"
-description: "记录最近完成的事情、学到的东西和当下的想法。"
+title: "近况"
+description: "最近在做什么、学到什么，随手记在这里。"
 translationKey: "updates-index"
 ---
 
-一些阶段成果、当下思考和正在进行的事情。
+短一点的记录都放这里，偶尔更新。

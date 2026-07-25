@@ -1,9 +1,9 @@
 ---
-title: "博客"
-description: "Yitao He 的技术文章、笔记与思考。"
+title: "文章"
+description: "阿滔写代码、折腾项目，顺便记下一些想法。"
 translationKey: "blogs-index"
 ---
 
-这里是长文技术解析、系统设计笔记与个人思考的博客区。
+这里放一些写得比较长的东西：技术、项目复盘，偶尔也聊生活。
 
-文章按分类（如 `system-design`、`backend`、`life`）组织，但均按时间倒序在此展示。
+新写的会排在前面，想看什么就随便逛逛。

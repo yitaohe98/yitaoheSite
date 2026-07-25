@@ -1,6 +1,6 @@
 ---
 title: "Blogs"
-description: "Technical articles, notes, and reflections by Yitao He."
+description: "Technical articles, notes, and reflections by Yitao."
 translationKey: "blogs-index"
 ---
 

@@ -1,9 +1,9 @@
 ---
 title: "首页"
-description: "Yitao He 个人站点。"
+description: "阿滔的小站。"
 translationKey: "home"
 ---
 
-这是我在互联网上的小角落，记录系统、技术与一路所学。
+这是阿滔在网上留的一块地方，写写代码、项目，还有最近在琢磨的事。
 
-前往 [概览](/zh/overview/) 了解更多，或到 [博客](/zh/blogs/) 阅读文章与笔记。
+想多了解一点，可以去 [关于我](/zh/overview/)；想看写过的东西，就去 [文章](/zh/blogs/)。
