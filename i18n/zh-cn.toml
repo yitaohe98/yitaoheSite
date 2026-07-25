@@ -36,6 +36,7 @@ empty = "暂无动态。"
 [comments]
 guestbook = "留言簿"
 leaveComment = "留下留言"
+closeForm = "收起表单"
 displayName = "昵称"
 displayNamePlaceholder = "你的昵称"
 displayNameHelp = "昵称会和留言一起公开显示。"

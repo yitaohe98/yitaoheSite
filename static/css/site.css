@@ -966,7 +966,7 @@ body.site-body {
 
 .comments-intro {
   max-width: 60ch;
-  margin-top: 8px;
+  margin: 8px auto 0;
   color: var(--fg-muted);
   font-size: 13px;
   line-height: 1.6;
@@ -1017,9 +1017,51 @@ body.site-body {
 }
 
 .comments-compose {
-  margin-top: 56px;
-  padding-top: 48px;
-  border-top: 1px solid var(--border-strong);
+  margin-top: 8px;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.comments-compose[hidden],
+.comments-more[hidden] {
+  display: none;
+}
+
+.comments-compose-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+[data-comments-app].is-compose-open .comments-compose-action {
+  justify-content: flex-end;
+  margin-top: 28px;
+}
+
+.comments-compose-toggle {
+  min-height: 44px;
+  padding-inline: 22px;
+  color: var(--fg);
+  background: transparent;
+  border-color: var(--border-strong);
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+[data-comments-app].is-compose-open .comments-compose-toggle {
+  min-height: auto;
+  padding: 6px 2px;
+  color: var(--fg-muted);
+  background: transparent;
+  border-color: transparent;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.comments-compose-toggle:hover {
+  color: var(--fg-strong);
+  background: var(--bg-soft);
 }
 
 .comments-compose .comments-panel-header {
@@ -1037,7 +1079,7 @@ body.site-body {
 }
 
 .comment-form {
-  max-width: 600px;
+  width: 100%;
   gap: 18px;
   margin: 28px auto 0;
 }
@@ -1247,7 +1289,8 @@ body.site-body {
   border-color: var(--input-focus-border);
 }
 
-.cf-turnstile {
+.cf-turnstile,
+.comment-turnstile {
   min-height: 65px;
 }
 
@@ -1346,8 +1389,15 @@ body.site-body {
   }
 
   .comments-compose {
-    margin-top: 44px;
-    padding-top: 40px;
+    margin-top: 8px;
+  }
+
+  .comments-compose-action {
+    margin-top: 32px;
+  }
+
+  [data-comments-app].is-compose-open .comments-compose-action {
+    margin-top: 24px;
   }
 
   .comment-item {

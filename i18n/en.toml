@@ -36,6 +36,7 @@ empty = "No updates yet."
 [comments]
 guestbook = "Guestbook"
 leaveComment = "Leave a message"
+closeForm = "Close form"
 displayName = "Name"
 displayNamePlaceholder = "Your name"
 displayNameHelp = "Shown publicly with your comment."

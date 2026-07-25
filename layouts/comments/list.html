@@ -44,7 +44,26 @@
           </noscript>
         </section>
 
-        <section class="comments-panel comments-compose" aria-labelledby="comment-form-title">
+        <div class="comments-compose-action">
+          <button
+            class="button button-ghost comments-compose-toggle"
+            type="button"
+            data-comment-compose-toggle
+            data-label-open="{{ i18n "comments.leaveComment" }}"
+            data-label-close="{{ i18n "comments.closeForm" }}"
+            aria-expanded="false"
+            aria-controls="comment-compose-panel"
+          >
+            <span data-comment-compose-label>{{ i18n "comments.leaveComment" }}</span>
+          </button>
+        </div>
+
+        <section
+          id="comment-compose-panel"
+          class="comments-panel comments-compose"
+          aria-labelledby="comment-form-title"
+          hidden
+        >
           <div class="comments-panel-header">
             <h2 id="comment-form-title" class="comments-panel-title">{{ i18n "comments.leaveComment" }}</h2>
             <div class="page-content comments-intro">
@@ -95,13 +114,10 @@
 
             {{ if $turnstileSiteKey }}
               <div
-                class="cf-turnstile"
+                class="comment-turnstile"
+                data-turnstile-container
                 data-sitekey="{{ $turnstileSiteKey }}"
                 data-action="comment_submit"
-                data-theme="light"
-                data-size="flexible"
-                data-error-callback="onCommentTurnstileError"
-                data-expired-callback="onCommentTurnstileExpired"
               ></div>
             {{ else }}
               <p class="comment-setup-note" role="note">{{ i18n "comments.turnstileNotConfigured" }}</p>
@@ -124,6 +140,6 @@
   </section>
 
   {{ if $turnstileSiteKey }}
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&amp;onload=onCommentTurnstileReady" defer></script>
   {{ end }}
 {{ end }}

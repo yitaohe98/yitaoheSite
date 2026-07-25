@@ -141,12 +141,17 @@ function copyEmail() {
   var formStatus = form && form.querySelector('[data-comment-status]');
   var nameCount = form && form.querySelector('[data-name-count]');
   var bodyCount = form && form.querySelector('[data-body-count]');
+  var composeToggle = app.querySelector('[data-comment-compose-toggle]');
+  var composeLabel = composeToggle && composeToggle.querySelector('[data-comment-compose-label]');
+  var composePanel = app.querySelector('#comment-compose-panel');
+  var turnstileContainer = form && form.querySelector('[data-turnstile-container]');
   var list = app.querySelector('[data-comments-list]');
   var feedState = app.querySelector('[data-comments-state]');
   var moreButton = app.querySelector('[data-comments-more]');
   var locale = app.getAttribute('data-locale') || document.documentElement.lang || 'en';
   var nextCursor = null;
   var loadedCommentIds = {};
+  var turnstileWidgetId = null;
 
   function characterCount(value) {
     return Array.from(value || '').length;
@@ -315,7 +320,7 @@ function copyEmail() {
 
   function resetTurnstile() {
     if (window.turnstile && typeof window.turnstile.reset === 'function') {
-      window.turnstile.reset();
+      window.turnstile.reset(turnstileWidgetId);
     }
   }
 
@@ -334,6 +339,57 @@ function copyEmail() {
       false
     );
   };
+
+  function renderTurnstile() {
+    if (
+      !turnstileContainer ||
+      turnstileWidgetId !== null ||
+      !window.turnstile ||
+      typeof window.turnstile.render !== 'function'
+    ) {
+      return;
+    }
+
+    turnstileWidgetId = window.turnstile.render(turnstileContainer, {
+      sitekey: turnstileContainer.getAttribute('data-sitekey'),
+      action: turnstileContainer.getAttribute('data-action') || 'comment_submit',
+      theme: document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light',
+      size: 'flexible',
+      'error-callback': window.onCommentTurnstileError,
+      'expired-callback': window.onCommentTurnstileExpired
+    });
+  }
+
+  window.onCommentTurnstileReady = function () {
+    if (composePanel && !composePanel.hidden) renderTurnstile();
+  };
+
+  function setComposeExpanded(expanded) {
+    if (!composeToggle || !composePanel) return;
+
+    composePanel.hidden = !expanded;
+    app.classList.toggle('is-compose-open', expanded);
+    composeToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+
+    if (composeLabel) {
+      composeLabel.textContent = composeToggle.getAttribute(
+        expanded ? 'data-label-close' : 'data-label-open'
+      );
+    }
+
+    if (expanded) {
+      renderTurnstile();
+      if (displayName) displayName.focus();
+    } else {
+      composeToggle.focus();
+    }
+  }
+
+  if (composeToggle && composePanel) {
+    composeToggle.addEventListener('click', function () {
+      setComposeExpanded(composePanel.hidden);
+    });
+  }
 
   if (displayName && body) {
     displayName.addEventListener('input', function () {
