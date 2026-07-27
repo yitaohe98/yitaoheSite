@@ -198,8 +198,12 @@ When given a PDF, pasted conversation, or rough text:
 6. Rewrite the Chinese article from the meaning of the approved English version
    and the original source—not sentence by sentence.
 7. Compare both versions for factual consistency.
-8. Render the site and review both languages in light and dark mode.
-9. Iterate with the author. Do not commit the article until the author accepts
+8. Create a paired update entry in `content/en/updates/` and `content/zh/updates/`.
+   Keep each version to one or two lines that summarize what was published or
+   learned. Use a shared `translationKey` and the same date as the blog post.
+9. Render the site and review both languages in light and dark mode, including
+   the new update entry.
+10. Iterate with the author. Do not commit the article or update until the author accepts
    the wording and presentation.
 
 If the supplied source is already Chinese, reverse steps 4 and 6: polish the
@@ -215,6 +219,7 @@ Before considering an imported post complete:
 - [ ] Headings are meaningful and generate a clean table of contents.
 - [ ] No manually written table of contents or reading-time text remains.
 - [ ] Front matter parses and both files share a `translationKey`.
+- [ ] A paired English and Chinese update entry exists with a one- or two-line summary.
 - [ ] Existing URLs remain stable.
 - [ ] Desktop title/header/body alignment looks intentional.
 - [ ] Mobile layout wraps without horizontal overflow.
@@ -239,8 +244,9 @@ The following is enough to start a future import:
 > PDF/text as the source for a new English blog post and a natural Chinese
 > counterpart. Preserve facts but clean up the structure and prose. Do not
 > translate Chinese sentence by sentence. Add the paired Markdown files, preserve
-> URL and `translationKey` conventions, build the Hugo site, and give me both
-> local preview links for review. Do not commit until I approve the wording.
+> URL and `translationKey` conventions, add a paired one- or two-line summary to
+> the updates feed, build the Hugo site, and give me both local preview links for
+> review. Do not commit until I approve the wording.
 
 This guide records the current editorial and presentation decisions. Update it
 when a future review establishes a better recurring rule.
