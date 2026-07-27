@@ -1,10 +1,10 @@
 ---
-title: "第二个项目怎么选：先做现金流，再做自己的资产"
+title: "我的第二个项目：六个方向"
 slug: "second-project-options"
 date: 2026-07-27
 description: "我从客户接触、付费意愿、风险、现金流和长期商业潜力几个角度，比较了六个项目方向。"
-primary_category: "项目复盘"
-categories: ["项目复盘"]
+primary_category: "随想"
+categories: ["随想"]
 tags: ["随想", "独立开发", "市场验证", "电商", "AI 辅助开发"]
 draft: false
 translationKey: "second-project-options"

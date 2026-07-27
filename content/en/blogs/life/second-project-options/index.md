@@ -1,10 +1,10 @@
 ---
-title: "Choosing My Second Project: Cash Flow First, Ownership Second"
+title: "Six Ideas for My Second Project"
 slug: "second-project-options"
 date: 2026-07-27
 description: "I compared six project options through customer access, willingness to pay, risk, cash flow, and long-term business potential."
-primary_category: "project recap"
-categories: ["project-recap"]
+primary_category: "random thoughts"
+categories: ["random-thoughts"]
 tags: ["Random Thoughts", "Indie Hacking", "Market Validation", "E-commerce", "AI-Assisted Development"]
 draft: false
 translationKey: "second-project-options"
