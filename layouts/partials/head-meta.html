@@ -44,4 +44,16 @@
 
   <link rel="stylesheet" href="/css/site.css" />
   <link rel="alternate" type="application/rss+xml" href="{{ .Site.BaseURL }}index.xml" title="yitaohe.com RSS" />
+
+  {{ if or .IsHome (and .IsSection (in (slice "overview" "blogs" "comments" "updates") .Section)) }}
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8XB08ZZYR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-M8XB08ZZYR');
+    </script>
+  {{ end }}
 </head>
